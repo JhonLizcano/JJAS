@@ -11,7 +11,7 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDto {
+public class UserDTO {
 
     private String id;
     private Date created;

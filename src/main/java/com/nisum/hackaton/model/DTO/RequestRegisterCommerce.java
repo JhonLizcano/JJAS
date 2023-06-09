@@ -15,10 +15,10 @@ import java.util.List;
 @Builder
 public class RequestRegisterCommerce {
 
-	@NotBlank(message = Constants.BLANK_NAME)
+	@NotBlank(message = Constants.BLANK_STORE_NAME)
 	private String name;
 
-	@NotBlank(message = Constants.BLANK_CATEGORY)
+	@NotBlank(message = Constants.BLANK_STORE_CATEGORY)
 	private String category;
 
 	@NotBlank(message = Constants.BLANK_PURPOSE)
