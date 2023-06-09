@@ -1,17 +1,16 @@
 package com.nisum.hackaton.repository;
 
 import com.nisum.hackaton.model.Commerce;
+import com.nisum.hackaton.model.Product;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface CommerceRepository extends CrudRepository<Commerce, String> {
+public interface ProductRepository extends CrudRepository<Product, String> {
 
-    Commerce save(Commerce commerce);
+    Product save(Product product);
 
-    Optional<Commerce> findByName(String name);
-
-    Optional<Commerce> findByIdCommerce(String name);
+    Optional<Product> findBySku(String sku);
 }

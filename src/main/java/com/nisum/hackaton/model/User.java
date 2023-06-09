@@ -34,19 +34,16 @@ public class User {
     @Column(nullable = false, length = 100)
     private String password;
 
+    private String address;
+
+    private String phone;
+
     private Date created;
 
     private Date modified;
 
-    @Column(name = "last_login")
-    private Date lastLogin;
-
     @Column(name = "is_active")
     private Boolean isActive;
-
-    private String address;
-
-    private String phone;
 
     @OneToMany(mappedBy = "user")
     private Set<Commerce> commerces;

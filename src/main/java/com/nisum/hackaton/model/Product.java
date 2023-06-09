@@ -22,7 +22,7 @@ public class Product {
 
     @Id
     @Column(name = "sku")
-    private long sku;
+    private String sku;
 
     @Column(name = "name")
     private String name;

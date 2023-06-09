@@ -15,13 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/register")
+@RequestMapping("/commerce")
 public class CommerceController {
 
     @Autowired
     private CommerceService commerceService;
 
-    @PostMapping(path = "/commerce", consumes = MediaType.APPLICATION_JSON_VALUE,
+    @PostMapping(path = "/create", consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ResponseRegisterCommerce> createCommerce(
             @Valid @RequestBody RequestRegisterCommerce requestRegisterCommerce) {

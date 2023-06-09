@@ -8,7 +8,7 @@ import com.nisum.hackaton.repository.CommerceRepository;
 import com.nisum.hackaton.repository.UserRepository;
 import com.nisum.hackaton.service.CommerceService;
 import com.nisum.hackaton.util.Constants;
-import com.nisum.hackaton.util.CommerceMapper;
+import com.nisum.hackaton.util.UtilMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,9 +32,9 @@ public class CommerceServiceImpl implements CommerceService {
                 if (user.isPresent()) {
                     Commerce commerce =
                             registerCommerceRepository.save(
-                                    CommerceMapper.getCommerceFromRequestRegister(requestRegisterCommerce, user.get()));
+                                    UtilMapper.getCommerceFromRequestRegister(requestRegisterCommerce, user.get()));
                     return ResponseRegisterCommerce.builder()
-                            .commerce(CommerceMapper.getCommerceDtoFromCommerce(commerce))
+                            .commerce(UtilMapper.getCommerceDtoFromCommerce(commerce))
                             .build();
                 } else {
                     return ResponseRegisterCommerce.builder()
